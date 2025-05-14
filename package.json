@@ -1,0 +1,52 @@
+{
+	"name": "users-manager-api",
+	"version": "1.0.0",
+	"main": "index.js",
+	"engines": {
+		"node": "22"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/caiohenrique-developer/users-manager-api.git"
+	},
+	"author": "caiohenrique-developer <caiohenrique.developer@gmail.com>",
+	"license": "MIT",
+	"scripts": {
+		"dev": "npx tsx watch --env-file .env ./src/server.ts",
+		"build": "yarn install --production=false && tsup-node",
+		"start": "node dist/server.mjs",
+		"biome:lint": "yarn biome lint --write ./src"
+	},
+	"keywords": [],
+	"bugs": {
+		"url": "https://github.com/caiohenrique-developer/users-manager-api/issues"
+	},
+	"homepage": "https://github.com/caiohenrique-developer/users-manager-api#readme",
+	"description": "",
+	"dependencies": {
+		"@prisma/client": "^6.7.0",
+		"bcrypt": "^5.1.1",
+		"cookie-parser": "^1.4.7",
+		"cors": "^2.8.5",
+		"express": "^5.1.0",
+		"jsonwebtoken": "^9.0.2",
+		"mongodb": "^6.16.0",
+		"zod": "^3.24.3"
+	},
+	"devDependencies": {
+		"@asteasolutions/zod-to-openapi": "^7.3.0",
+		"@biomejs/biome": "^1.9.4",
+		"@types/bcrypt": "^5.0.2",
+		"@types/cookie-parser": "^1.4.8",
+		"@types/cors": "^2.8.17",
+		"@types/jsonwebtoken": "^9.0.9",
+		"@types/node": "^22.15.3",
+		"@types/swagger-ui-express": "^4.1.8",
+		"nodemon": "^3.1.10",
+		"prisma": "^6.7.0",
+		"swagger-ui-express": "^5.0.1",
+		"tsup": "^8.4.0",
+		"tsx": "^4.19.4",
+		"typescript": "^5.8.3"
+	}
+}
