@@ -1,8 +1,8 @@
 import type { User } from "../../generated/prisma";
 
-import { AppError } from "@/utils/appError";
-import { comparePassword, encryptPassword } from "@/utils/encryptPassword";
-import { prisma } from "@/utils/prisma";
+import { AppError } from "../utils/appError";
+import { comparePassword, encryptPassword } from "../utils/encryptPassword";
+import { prisma } from "../utils/prisma";
 
 interface CreateUserServiceProps extends Omit<User, "id"> {}
 

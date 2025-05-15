@@ -2,9 +2,6 @@
 	"name": "users-manager-api",
 	"version": "1.0.0",
 	"main": "index.js",
-	"engines": {
-		"node": "22"
-	},
 	"repository": {
 		"type": "git",
 		"url": "git+ssh://git@github.com/caiohenrique-developer/users-manager-api.git"
@@ -13,8 +10,8 @@
 	"license": "MIT",
 	"scripts": {
 		"dev": "npx tsx watch --env-file .env ./src/server.ts",
-		"build": "yarn install --production=false && tsup-node",
-		"start": "node dist/server.mjs",
+		"build": "yarn install --production=false && npx prisma generate && tsc",
+		"start": "ts-node -r tsconfig-paths/register src/server.ts",
 		"biome:lint": "yarn biome lint --write ./src"
 	},
 	"keywords": [],
@@ -28,9 +25,12 @@
 		"bcrypt": "^5.1.1",
 		"cookie-parser": "^1.4.7",
 		"cors": "^2.8.5",
+		"dotenv": "^16.5.0",
 		"express": "^5.1.0",
 		"jsonwebtoken": "^9.0.2",
 		"mongodb": "^6.16.0",
+		"ts-node": "^10.9.2",
+		"tsconfig-paths": "^4.2.0",
 		"zod": "^3.24.3"
 	},
 	"devDependencies": {

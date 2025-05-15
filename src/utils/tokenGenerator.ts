@@ -1,8 +1,8 @@
 import type { Request } from "express";
 import jwt from "jsonwebtoken";
 
-import { processEnv } from "@/env";
-import { AppError } from "@/utils/appError";
+import { processEnv } from "../env";
+import { AppError } from "../utils/appError";
 
 import type { User } from "../../generated/prisma";
 

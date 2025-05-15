@@ -2,9 +2,9 @@ import z from "zod";
 
 import type { NextFunction, Request, Response } from "express";
 
-import { processEnv } from "@/env";
-import { loginService } from "@/services/authService";
-import { verifyToken } from "@/utils/tokenGenerator";
+import { processEnv } from "../env";
+import { loginService } from "../services/authService";
+import { verifyToken } from "../utils/tokenGenerator";
 
 const loginCredentialsSchema = z.object({
 	email: z.string().email({ message: "Invalid email address" }),

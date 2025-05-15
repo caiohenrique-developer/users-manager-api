@@ -2,10 +2,10 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import express from "express";
 
-import { processEnv } from "@/env";
-import { errorHandlerMiddleware } from "@/middlewares/errorHandlerMiddleware";
-import { route } from "@/routes";
-import { swaggerDocument, swaggerUi } from "@/swagger";
+import { processEnv } from "./env";
+import { errorHandlerMiddleware } from "./middlewares/errorHandlerMiddleware";
+import { route } from "./routes";
+import { swaggerDocument, swaggerUi } from "./swagger";
 
 const app = express();
 

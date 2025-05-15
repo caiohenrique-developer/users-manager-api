@@ -8,21 +8,21 @@ import {
 	extendZodWithOpenApi,
 } from "@asteasolutions/zod-to-openapi";
 
-import { loginPath, logoutPath, mePath } from "@/swagger/paths/authPath";
+import { loginPath, logoutPath, mePath } from "../swagger/paths/authPath";
 import {
 	createUserPath,
 	getUserByIdPath,
 	getUsersPath,
 	removeUserPath,
 	updateUserPath,
-} from "@/swagger/paths/userPath";
-import { loginRequestSchema } from "@/swagger/schemas/authSchema";
+} from "../swagger/paths/userPath";
+import { loginRequestSchema } from "../swagger/schemas/authSchema";
 import {
 	getUsersListSchema,
 	userCreateSchema,
 	userRemoveSchema,
 	userUpdateSchema,
-} from "@/swagger/schemas/userSchema";
+} from "../swagger/schemas/userSchema";
 
 extendZodWithOpenApi(z);
 

@@ -1,3 +1,5 @@
+import "dotenv/config";
+
 import z from "zod";
 
 const envSchema = z.object({
@@ -5,10 +7,7 @@ const envSchema = z.object({
 	FRONT_URL: z.string().url().default("http://localhost:5173"),
 	JWT_SECRET: z.string().default("JWT Secret"),
 	NODE_ENV: z.enum(["development", "production"]).default("development"),
-	DATABASE_URL: z
-		.string()
-		.url()
-		.default("mongodb://USERNAME:PASSWORD@HOST:PORT/DATABASE"),
+	DATABASE_URL: z.string().url(),
 });
 
 const { data, success, error } = envSchema.safeParse(process.env);

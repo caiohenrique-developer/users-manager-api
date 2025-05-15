@@ -7,7 +7,7 @@ import {
 	loginResponse201Schema,
 	loginResponse400Schema,
 	meResponse200Schema,
-} from "@/swagger/schemas/authSchema";
+} from "../../swagger/schemas/authSchema";
 
 const loginPath: RouteConfig = {
 	tags: ["Auth"],
