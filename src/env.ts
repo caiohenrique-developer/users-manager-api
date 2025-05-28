@@ -1,12 +1,10 @@
-import "dotenv/config";
-
 import z from "zod";
 
 const envSchema = z.object({
-	PORT: z.coerce.number().default(4000),
-	FRONT_URL: z.string().url().default("http://localhost:5173"),
-	JWT_SECRET: z.string().default("JWT Secret"),
-	NODE_ENV: z.enum(["development", "production"]).default("development"),
+	PORT: z.coerce.number(),
+	FRONT_URL: z.string().url(),
+	JWT_SECRET: z.string(),
+	NODE_ENV: z.enum(["development", "production"]),
 	DATABASE_URL: z.string().url(),
 });
 

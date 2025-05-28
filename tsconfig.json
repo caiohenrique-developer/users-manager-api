@@ -6,7 +6,7 @@
     "src"
   ],
   "compilerOptions": {
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "outDir": "./dist",
     "rootDir": "./src",
     "lib": [
@@ -14,7 +14,7 @@
     ],
     "paths": {
       "@/*": [
-        "*"
+        "./src/*"
       ]
     },
     "typeRoots": [
@@ -26,6 +26,6 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node16"
   }
 }

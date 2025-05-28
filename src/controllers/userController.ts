@@ -1,18 +1,18 @@
 import type { Request, Response } from "express";
 
+import { UserRoleEnum } from "@/@types/userInfo";
 import {
 	createUserService,
 	deleteUserService,
 	getUserByIdService,
 	getUserListService,
 	updateUserService,
-} from "../services/userService";
+} from "@/services/userService";
 import {
 	userCreateSchema,
 	userIDSchema,
 	userUpdateSchema,
-} from "../swagger/schemas/userSchema";
-import { UserRoleEnum } from "../types/userInfo";
+} from "@/swagger/schemas/userSchema";
 
 async function getUserListController(req: Request, res: Response) {
 	const userList = await getUserListService();

@@ -1,9 +1,9 @@
 import type { NextFunction, Request, Response } from "express";
 import jwt from "jsonwebtoken";
 
-import { processEnv } from "../env";
-import type { UserInfo } from "../types/userInfo";
-import { AppError } from "../utils/appError";
+import type { UserInfo } from "@/@types/userInfo";
+import { processEnv } from "@/env";
+import { AppError } from "@/utils/appError";
 
 export function verifyTokenMiddleware(
 	req: Request,
